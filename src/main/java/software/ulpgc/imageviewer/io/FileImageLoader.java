@@ -1,10 +1,11 @@
 package software.ulpgc.imageviewer.io;
 
-import software.ulpgc.imageviewer.mvc.model.Image;
+import software.ulpgc.imageviewer.model.Image;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -14,8 +15,17 @@ import static java.util.Objects.requireNonNull;
 public class FileImageLoader implements ImageLoader {
     private final File[] files;
 
-    public FileImageLoader(File folder) {
-        this.files = requireNonNull(folder.listFiles(ofImageFiles()));
+    public FileImageLoader() {
+        try {
+            URL imagesFolder = requireNonNull(getClass().getClassLoader().getResource("images"));
+
+            File folder = new File(imagesFolder.toURI());
+            if (!folder.isDirectory())
+                throw new IllegalArgumentException(folder.getPath() + "directory is empty.");
+
+            this.files = requireNonNull(folder.listFiles(ofImageFiles()));
+        }
+        catch (Exception e) {throw new RuntimeException(e);}
     }
 
     private FileFilter ofImageFiles() {

@@ -1,4 +1,4 @@
-package software.ulpgc.imageviewer.mvc.view;
+package software.ulpgc.imageviewer.view;
 
 public record ViewPort(int xCoord, int yCoord, int width, int height) {
     public static ViewPort ofSize(int width, int height) {

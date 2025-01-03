@@ -1,3 +1,3 @@
-package software.ulpgc.imageviewer.mvc.view;
+package software.ulpgc.imageviewer.view;
 
 public record ImageSize(int width, int height) {}
