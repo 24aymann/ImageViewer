@@ -20,10 +20,13 @@ public class MainFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1280, 800);
         this.setLocationRelativeTo(null);
-        this.setLayout(new BorderLayout());
-
         this.add(imageDisplay = newImageDisplay());
+
+        JScrollPane scrollPane = new JScrollPane(imageDisplay);
+        this.add(scrollPane, BorderLayout.CENTER);
         this.add(utilityPanel(), BorderLayout.SOUTH);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
     }
 
     private SwingImageDisplay newImageDisplay() {

@@ -21,7 +21,7 @@ public class FileImageLoader implements ImageLoader {
 
             File folder = new File(imagesFolder.toURI());
             if (!folder.isDirectory())
-                throw new IllegalArgumentException(folder.getPath() + "directory is empty.");
+                throw new IllegalArgumentException(folder.getPath() + " directory is empty.");
 
             this.files = requireNonNull(folder.listFiles(ofImageFiles()));
         }
