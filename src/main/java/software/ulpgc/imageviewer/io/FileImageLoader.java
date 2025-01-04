@@ -50,11 +50,6 @@ public class FileImageLoader implements ImageLoader {
     private Image getImageAt(int index) {
         return new Image() {
             @Override
-            public String name() {
-                return currentFile().getName();
-            }
-
-            @Override
             public byte[] content() {
                 try {
                     return Files.readAllBytes(currentFile().toPath());
@@ -83,11 +78,6 @@ public class FileImageLoader implements ImageLoader {
 
             private int previousIndex() {
                 return index > 0 ? index - 1 : files.length - 1;
-            }
-
-            @Override
-            public Format format() {
-                return null;
             }
         };
     }

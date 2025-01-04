@@ -1,4 +1,4 @@
-package software.ulpgc.imageviewer;
+package software.ulpgc.imageviewer.swingApp;
 
 import software.ulpgc.imageviewer.io.ImageDeserializer;
 
