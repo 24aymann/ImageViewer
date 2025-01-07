@@ -11,6 +11,7 @@ in which is coded an application that simulates an image viewer.
 ## Implemented Commands
 - While the application **is running**, apart from the coded buttons at the window bottom, there are several actions
   you can do in order to test all the developed functions, such as:  
+
     *1️⃣.]* Scroll with the mouse wheel so as to zoom any picture.  
       
     *2️⃣.]* Double tap in the screen to reset the zoom.  
