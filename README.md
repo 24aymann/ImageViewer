@@ -8,7 +8,7 @@ in which is coded an application that simulates an image viewer.
 - There is a default images gallery located in the resources section of the Maven project, so feel free to
   add/change/delete any pictures you want.
 
-## Implemented Commands
+## Implemented Commands🔗
 - While the application **is running**, apart from the coded buttons at the window bottom, there are several actions
   you can do in order to test all the developed functions, such as:  
 
